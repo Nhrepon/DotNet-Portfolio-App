@@ -24,7 +24,7 @@ namespace Portfolio
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/bootstrap-icons.min.css",
+                      "~/Content/bootstrap-icons.css",
                       "~/Content/site.css"));
         }
     }

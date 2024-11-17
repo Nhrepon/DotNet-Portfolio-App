@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - ASP.NET Portfolio Application</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/toastify.min.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -22,6 +23,10 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Profile", "Index", "User", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
+            </div>
+
+            <div>
+                <button class="btn btn-success">@Html.ActionLink("Login", "LoginPage", "User", new { area = "" }, new { @class = "nav-link" })</button>
             </div>
         </div>
     </nav>
@@ -41,8 +46,12 @@
         </div>
     </footer>
 
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/scripts/toastify-js.js")
+    @Scripts.Render("~/scripts/config.js")
+    @Scripts.Render("~/scripts/axios.min.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>
